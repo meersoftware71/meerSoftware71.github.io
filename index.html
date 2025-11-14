@@ -4,16 +4,46 @@
     <meta charset="UTF-8">
     <title>Stock Monitor Extension</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        h1 { color: #333; }
-        .cta { background: #28a745; color: white; padding: 10px 20px; text-decoration: none; }
+        html { 
+            background-image: url('background.png');
+            background-size:     cover;
+            background-repeat:   no-repeat;
+            background-position: center center; 
+            margin: 0;
+            height: 100%;
+        }
+        body { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 20px;
+            font-size: 30px;
+        }
+        .txt { 
+            font-family: Arial, sans-serif; 
+            text-align: left; 
+            padding: 20px; 
+        }
+        .cta { 
+            display: flex; 
+            flex-direction: row; 
+            justify-content: center; 
+            background: #28a745; 
+            color: white; 
+            width: 500px;
+            border-radius: 10px; 
+            text-decoration: none; 
+        }
     </style>
 </head>
 <body>
-    <h1>Chrome/Edge extension stockMonitor made by meerSoftware</h1>
-    <p>Track up to 3 stocks for free or subscribe for unlimited tracking!</p>
-    <p>Download url soon to be expected!</p>
-    <!-- <a href="https://your-browserbill-checkout-link" class="cta">Upgrade to Premium</a>
-    -->
+    <h1>Chrome/Edge extension Stock monitor made by meerSoftware</h1>
+    <t class="txt">
+        <p>Track up to three stocks for free or subscribe for unlimited tracking!<br>
+        You can get a subscription for two dollars per month.<br>
+        When you add more then three stocks, you are redirected by the extention to the checkout page.</p>
+    </t>
+    <a href="https://chromewebstore.google.com/detail/stock-monitor-toolbox-to/ldbicmccmjpmlpepcjnlfpmabjioonce" class="cta">Go to the Chrome store</a>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/stock-monitor-toolbox-t/oifbhnbhanlpaklabenegnbnpaphicgm" class="cta">Go to the Edge store</a>
 </body>
 </html>
