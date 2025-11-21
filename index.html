@@ -1,65 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Stock Monitor Extension</title>
-    <style>
-        html { 
-            margin: 0;
-            margin-bottom: 100px;
-            height: 100%;
-        }
-        body { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            gap: 20px;
-            font-size: 30px;
-        }
-        .txt { 
-            font-family: Arial, sans-serif; 
-            text-align: left; 
-            padding: 10px; 
-        }
-        .cta { 
-            display: flex; 
-            flex-direction: row; 
-            justify-content: center; 
-            background: #28a745; 
-            color: white; 
-            width: 500px;
-            border-radius: 10px; 
-            text-decoration: none; 
-        }
-        .trailer {
-            height: 200px;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stock Monitor Toolbox</title>
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+line-height: 1.6;
+color: #222;
+}
+header {
+background: #0a84ff;
+color: white;
+padding: 40px 20px;
+text-align: center;
+}
+header h1 {
+margin: 0;
+font-size: 2.2rem;
+}
+header p {
+margin-top: 10px;
+font-size: 1.1rem;
+}
+.container {
+max-width: 900px;
+margin: 0 auto;
+padding: 20px;
+}
+.btn {
+display: inline-block;
+background: #0a84ff;
+color: white;
+padding: 12px 20px;
+border-radius: 6px;
+text-decoration: none;
+font-weight: bold;
+}
+section {
+margin: 50px 0;
+}
+h2 {
+margin-bottom: 15px;
+color: #0a84ff;
+}
+footer {
+background: #f5f5f5;
+padding: 20px;
+text-align: center;
+margin-top: 50px;
+}
+</style>
 </head>
 <body>
-    <h1>Chrome/Edge extension Stock monitor made by meerSoftware</h1>
-    <t class="txt">
-        <p>
-        StockMonitor is a browser extension for Chrome and Edge that allows users to track stock prices in real time. <br>
-        After installing the extension, users can add their favorite stocks to the watchlist. <br>
-        The extension automatically fetches updated price information every minute from Yahoo.com. <br>
-        <br>
-        Users can track up to three stocks for free. To track more than three stocks, <br>
-        they can upgrade to a subscription of $2 per month, which unlocks unlimited stock tracking.<br>
-        When a user attempts to add more than three stocks, they are redirected to the subscription checkout page.<br>
-        <br>
-        The extension is installed directly from the Chrome/Edge Web Store by clicking the “Add” button. <br>
-        Once installed, the extension runs inside the user’s browser and displays live stock information.<br>
-        <br>
-        Delivery of Service:<br>
-        After payment, users instantly receive unlimited tracking access inside the extension. <br>
-        No manual steps are required — the upgrade is automatically applied to the user’s installed extension.<br>
-        <br>
-        Support:<br>
-        Users can contact us for support at meerSoftware71@gmail.com<br>
-        </p>
-    </t>
-    <a href="https://chromewebstore.google.com/detail/stock-monitor-toolbox-to/ldbicmccmjpmlpepcjnlfpmabjioonce" class="cta">Go to the Chrome store</a>
-    <a href="https://microsoftedge.microsoft.com/addons/detail/stock-monitor-toolbox-t/oifbhnbhanlpaklabenegnbnpaphicgm" class="cta">Go to the Edge store</a>
+<header>
+<h1>Stock Monitor</h1>
+<p>Track your favorite stocks directly in your Chrome/Edge browser. Free for up to 3 stocks.</p>
+<a class="btn" href="https://microsoftedge.microsoft.com/addons/detail/stock-monitor-toolbox-t/oifbhnbhanlpaklabenegnbnpaphicgm" target="_blank">Install on Microsoft Edge</a>
+<a class="btn" href="https://chromewebstore.google.com/detail/stock-monitor-toolbox-to/ldbicmccmjpmlpepcjnlfpmabjioonce" target="_blank">Install on Google Chrome</a>
+</header>
+
+
+<div class="container">
+<section>
+<h2>About the Extension</h2>
+<p>Stock Monitor is a lightweight Chrome/Edge browser extension that allows you to track stock prices quickly and efficiently. Add up to 3 stocks for free and monitor them at any time.</p>
+</section>
+
+
+<section>
+<h2>How It Works</h2>
+<ol>
+<li>Install the extension from the Chrome/Edge Add‑ons Store.</li>
+<li>Open the extension and add stocks to your watchlist.</li>
+<li>Track up to 3 stocks for free.</li>
+<li>When adding more than 3 stocks, a subscription checkout page appears inside the extension.</li>
+</ol>
+</section>
+
+
+<section>
+<h2>Pricing</h2>
+<p><strong>Free:</strong> Track up to 3 stocks.</p>
+<p><strong>Premium:</strong> Unlock unlimited stocks and additional features for only 2 dollars per month. Subscription is handled directly inside the extension.</p>
+</section>
+
+
+<section>
+<h2>Support</h2>
+<p>If you need help or want to report a bug, you can contact us at:</p>
+<p><strong>Email:</strong>meersoftware71@gmail.com</p>
+</section>
+</div>
+
+<section style="max-width:900px;margin:40px auto;">
+    <h2 style="color:#0a84ff;">Screenshots</h2>
+    <div class="slider" id="slider" style="position:relative;overflow:hidden;border-radius:8px;">
+    <div class="slides" style="display:flex;transition:transform 0.4s ease;">
+    <img src="images/main.png" style="width:100%;flex-shrink:0;" />
+    <img src="images/search.png" style="width:100%;flex-shrink:0;" />
+    <img src="images/graph.png" style="width:100%;flex-shrink:0;" />
+    <img src="images/news.png" style="width:100%;flex-shrink:0;" />
+    <img src="images/banner.png" style="width:100%;flex-shrink:0;" />
+    </div>
+    </div>
+    <div style="text-align:center;margin-top:10px;">
+    <button onclick="prevSlide()" class="btn">Prev</button>
+    <button onclick="nextSlide()" class="btn">Next</button>
+    </div>
+</section>
+
+<footer>
+<p>&copy; 2025 meersoftware bv KVK-nummer: 98006940. All rights reserved.</p>
+</footer>
+
+<script>
+    let index = 0;
+    function showSlide() {
+        const slider = document.querySelector('.slides');
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+    function nextSlide() {
+        const total = document.querySelectorAll('.slides img').length;
+        index = (index + 1) % total;
+        showSlide();
+    }
+    function prevSlide() {
+        const total = document.querySelectorAll('.slides img').length;
+        index = (index - 1 + total) % total;
+        showSlide();
+    }
+</script>
 </body>
 </html>
